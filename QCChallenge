@@ -1,0 +1,389 @@
+1\. Compatibility check - Check whether the app is compatible with current and old versions of the OS (Given that it is on an android: compatibility with different Android Interfaces)
+
+2\. Testing of main functionalities: Adding an expense - Adding income - Calculations are done correctly
+
+3\. Testing of additional functionalities: Transfer from account to account - adding/removing an account
+
+4\. Testing of further additional functionalities: Adding/removing categories - Changing icons - filtering transactions
+
+UX Recommendation:
+
+1\. Icons move from their place after every transaction which may be misleading to what a user might be acustomed to when adding their expenses
+
+2\. Add Label is misleading: there is a label named "add" that misleads the user to tapping it to add the category
+
+3\. Top left of the app landing page shows which account you're on, but it is not clickable. Would be great to tap it then be able to switch between accounts through it
+
+=========================
+
+Bug #1
+
+Title: App crashes when selecting a date after the year 2036
+
+Description: When selecting a date after 2036 then selecting the year label the app crashes
+
+Steps:
+
+1\. Open the App
+
+2\. Tap Add Expense Icon (The Red Minus icon)
+
+3\. Tap on the date label
+
+4\. Tap on the Year Value (e.g. 2020)
+
+5\. Scroll down to year 2036 > Select 2036
+
+6\. Scroll down on the calendar to year 2037
+
+7\. Select a date with the year being 2037 (e.g. 1 June 2037)
+
+8\. Tap on the Year Value again (2037)
+
+Expected:
+
+The selected date should be selected normally
+
+Actual:
+
+App crashes
+
+Affected Devices:
+
+1\. iPhone 11 Pro Max - iOS 13.3.1
+
+Network:
+
+1\. 3G
+
+2\. 4G
+
+3\. ADSL
+
+4\. Offline
+
+Severity:
+
+1\. Major
+
+Priority:
+
+1\. Medium
+
+Impact:
+
+1\. Major
+
+===========================
+
+Bug #2
+
+Title: There is no buffer for the user to have expenses/income
+
+Description: When deleting an expense/income category then trying to add a new one instead of the deleted, the get premium form pops up; not allowing the user to add a category
+
+Steps:
+
+1\. Open the App
+
+2\. Open the right hand side menu
+
+3\. Tap Categories
+
+4\. Select a category > Tap Delete > Confirm deletion
+
+5\. Tap the plus sign to add a category
+
+Expected:
+
+New Category form should appear
+
+Actual:
+
+Get Premium pops up
+
+Affected Devices:
+
+1\. iPhone 11 Pro Max - iOS 13.3.1
+
+Network:
+
+1\. 3G
+
+2\. 4G
+
+3\. ADSL
+
+4\. Offline
+
+Severity:
+
+1\. Minor
+
+Priority:
+
+1\. Medium
+
+Impact:
+
+1\. Minor
+
+===========================
+
+Bug #3
+
+Title: Scrolling disabled for Language change causing first touch to be selected
+
+Description: When trying to change the language, no active scrolling is allowed causing the first touch to the screen to be saved as a selection, hence changing the language immediately
+
+Steps:
+
+1\. Open the App
+
+2\. Open the right hand side menu
+
+3\. Tap Settings
+
+4\. Tap Language
+
+5\. Try to scroll
+
+Expected:
+
+List can be scrolled or not first touch can be considered as confirmation
+
+Actual:
+
+App language changes immediately
+
+Affected Devices:
+
+1\. iPhone 11 Pro Max - iOS 13.3.1
+
+Network:
+
+1\. 3G
+
+2\. 4G
+
+3\. ADSL
+
+4\. Offline
+
+Severity:
+
+1\. Minor
+
+Priority:
+
+1\. Medium
+
+Impact:
+
+1\. Minor
+
+===========================
+
+Bug #4
+
+Title: Cannot change destination and target accounts in Transfers
+
+Description: When making a transfer, the numeric pad overlays the source and destination accounts and can ony be accessed by pressing back
+
+Steps:
+
+1\. Open the App
+
+2\. Tap the Transfer icon
+
+3\. Tap the amount label
+
+4\. Tap a blank space to close the numpad
+
+Expected:
+
+Numpad should disappear
+
+Actual:
+
+Numpad is stuck unless "back" is tapped
+
+Affected Devices:
+
+1\. iPhone 11 Pro Max - iOS 13.3.1
+
+Network:
+
+1\. 3G
+
+2\. 4G
+
+3\. ADSL
+
+4\. Offline
+
+Severity:
+
+1\. Minor - With workaround
+
+Priority:
+
+1\. Medium
+
+Impact:
+
+1\. Minor
+
+===========================
+
+Bug #5
+
+Title: Not all icons point to the chart
+
+Description: If an expense category value is minimal compared to other categories, its icon does not have an arrow pointing to its place on the Pie Chart
+
+Steps:
+
+1\. Open the App
+
+2\. Add multiple expenses for 6 categories
+
+3\. Add an expense to a 7th category
+
+Expected:
+
+All icons should point to a section of the pie chart
+
+Actual:
+
+Not all icons point at the pie chart
+
+Affected Devices:
+
+1\. iPhone 11 Pro Max - iOS 13.3.1
+
+Network:
+
+1\. 3G
+
+2\. 4G
+
+3\. ADSL
+
+4\. Offline
+
+Severity:
+
+1\. Minor
+
+Priority:
+
+1\. Low
+
+Impact:
+
+1\. Minor
+
+===========================
+
+Bug #6
+
+Title: Filtering by day isn't accurate
+
+Description: When trying to filter by day no results appear
+
+Steps:
+
+1\. Open the App
+
+2\. Open the left hand side menu
+
+3\. Select "choose date" > Select a date (Must have a transaction saved to this date)
+
+Expected:
+
+The selected date should display its transactions
+
+Actual:
+
+No change takes place
+
+Affected Devices:
+
+1\. iPhone 11 Pro Max - iOS 13.3.1
+
+Network:
+
+1\. 3G
+
+2\. 4G
+
+3\. ADSL
+
+4\. Offline
+
+Severity:
+
+1\. Minor
+
+Priority:
+
+1\. Low
+
+Impact:
+
+1\. Minor
+
+===========================
+
+Bug #7
+
+Title: When deleting all categories there is no option to add again - even if you're on premium - the add button is removed completey
+
+Description: If you delete all categories, whether expense or income, the plus sign to add a category is completely removed and there is no way to add a category hence no way to add an expense/income
+
+Steps:
+
+1\. Open the App
+
+2\. Open the right hand side menu
+
+3\. Select Categories
+
+4\. Delete all categories, both Income and Expense
+
+5\. Try to add a category
+
+Expected:
+
+Adding a new category should be possible for a buffer
+
+Actual:
+
+Get Premium pops up
+
+Affected Devices:
+
+1\. iPhone 11 Pro Max - iOS 13.3.1
+
+Network:
+
+1\. 3G
+
+2\. 4G
+
+3\. ADSL
+
+4\. Offline
+
+Severity:
+
+1\. Critical
+
+Priority:
+
+1\. High
+
+Impact:
+
+1\. Blocker
